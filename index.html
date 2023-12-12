@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <div class="todo__inner">
+
+    <div class="todo__sidebar">
+      <ul class="todo__sidebar-list">
+        <li> <a id="all" class="todo__sidebar-link active">All</a> </li>
+        <li> <a id="shop" data-set="shopping" class="todo__sidebar-link">Shopping</a> </li>
+        <li> <a id="coll" data-set="college" class="todo__sidebar-link">College</a> </li>
+        <li> <a id="pay" data-set="paynemts" class="todo__sidebar-link">Payments</a> </li>
+        <li> <a id="arch" data-set="homeworks" class="todo__sidebar-link">Homeworks</a> </li>
+      </ul>
+      <button id="btnBurgerClose" class="button__burger-close">
+        <img src="img/btn-close.svg" alt="">
+      </button>
+    </div>
+
+
+
+    <div class="todo__main">
+
+      <div class="todo__title-block">
+        <button id="btnBurger" class="button__burger">
+          <img class="button__img" src="img/button.svg" alt="">
+        </button>
+        <h1 class="todo__title">All Tasks</h1>
+      </div>
+
+      <div class="todo__input">
+        <div class="todo__input-hide">
+          Задача не может иметь в названии больше 30-и символов
+        </div>
+        <input autofocus id="input" type="text" placeholder="Add a new task" maxlength="30">
+        <button id="addBtn" class="todo__input-btn">+</button>
+      </div>
+
+      <div class="todo__btn-nav">
+        <select id="select" class="todo__select" id="">
+          <option value="">Select a folder</option>
+          <option value="shopping">Shopping</option>
+          <option value="college">College</option>
+          <option value="paynemts">Payments</option>
+          <option selected value="homeworks">Homeworks</option>
+        </select>
+
+        <button id="tasksDel" class="todo__tasks-del">Delete</button>
+        <button id="tasksСhoose" class="todo__tasks-del">Select all</button>
+        <button id="tasksСhooseDel" class="todo__tasks-del">Remove all</button>
+      </div>
+
+
+
+      <div class="todo__counts">
+        <div class="todo__count-task">Num of tasks: <strong class="allNum">0</strong></div>
+        <div class="todo__count-done">Num of completed tasks: <strong class="allDoneNum">0</strong></div>
+        <div class="todo__count-undone">Num of uncompleted tasks: <strong class="allUnDoneNum">0</strong></div>
+      </div>
+
+      <div class="todo__list">
+      </div>
+
+    </div>
+
+  </div>
+
+  <div id="overlay"></div>
+  <script src="script.js"></script>
+</body>
+
+</html>
